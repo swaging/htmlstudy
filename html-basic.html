@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>html练习</title>
+</head>
+<body>
+  <h1>Lorem.</h1>
+  <h2>Lorem ipsum.</h2>
+  <h3>Lorem ipsum dolor.</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime corrupti,nulla earum possimus viate omnis odio pariatur officaical! Odit ipsa alias mostrum sint ex non repellendus,doloremque et.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscript quarat sint commodi est iaque vero,incidunt,quisquam obcaecati iusto minus inventore volupatatum. Consequuntur,at sequi ut nihil fugit amet possimus.</p>
+  <p>
+    <a href="https://www.jd.com/">在新窗口打开京东</a>
+    <a href="mailto:944968535@qq.com">点击给我发邮件</a>
+    <a href="#bottom">跳转到本页的底部</a>
+    <a href="https://di.gameres.com/attachment/forum/201702/04/160938nrirnlie33imliwn.jpg" download="">点我可以下载个文件</a>
+  </p>
+  <hr>
+  <marquee>飘~~~</marquee>
+  <em>这几种强调</em>
+  <strong>有什么区别呢？</strong>
+  <u>这个呢？</u>
+  <i>这个呢？</i>
+  <p>
+    &lt;!-- 这段注释需要出现在页面里 -->
+  </p>
+  <p>
+    html的注释怎么写？
+  </p>
+  <p>
+    下面是一段javascript代码,最合适用何种标签表示呢？
+  </p>
+  <pre>
+      <code>
+          function a(){
+            return 8
+          }
+        </code>
+  </pre>
+  <hr>
+  <ul>
+    <li>小学
+      <ol>
+        <li>一年级</li>
+          <ol>
+            <li>上学期</li>
+            <li>下学期</li>
+          </ol>
+        <li>二年级</li>
+        <li>三年级</li>
+      </ol>
+    </li>
+    <li>中学</li>
+    <li>大学</li>
+  </ul>
+  <hr>
+  <dl>
+    <dt>班级</dt>
+    <dd>三年二班</dd>
+    <dt>老师</dt>
+    <dd>张老师</dd>
+    <dd>李老师</dd>
+    <dd>王老师</dd>
+    <dt>学生</dt>
+    <dd>小明</dd>
+    <dd>豆豆</dd>
+  </dl>
+  <hr>
+  <h2>Google搜索</h2>
+  <form action="https://www.baidu.com/s" target="_blank" method="GET">
+    <input type="text"  name="text"  required placeholder="请输入想要搜索的内容">
+    <button>在新窗口打开搜索结果</button>
+  </form>
+  <hr>
+  <form action="">
+    <dl>
+      <dt>个人信息调查表</dt>
+      <dd><input type="radio" name="性别" value="男">男
+        <input type="radio" name="性别" value="女">女</dd>  
+      <dt>年龄</dt>
+      <dd>
+        <select name="年龄">
+          <option value="0" selected hidden>请选择</option>
+          <optgroup value="少年">
+              <option value="1">1-6岁</option>
+              <option value="2">6-12岁</option>
+          </optgroup>
+          <optgroup value="青年"">
+              <option value="3">13-15岁</option>
+              <option value="4">16-18岁</option>
+          </optgroup> 
+          <optgroup value="壮年">
+              <option value="5">18-22岁</option>
+              <option value="6">23-30岁</option> 
+          </optgroup>  
+        </select>
+      </dd>
+      <dt>生日</dt>
+      <dd><input type="date" name="生日" value="mm/dd/yyyy"></dd>
+      <dt>生辰</dt>
+      <dd><input type="time"></dd>
+      <dt>照片</dt>
+      <dd>
+      <label>点我上传照片，我比文件上传按钮好看<input type="file" name="照片" accept=".jpg,.bmp,.png,.css,.html,.js" hidden></label>
+      </dd>
+      <dt>肤色</dt>
+      <dd><input type="color" name="肤色" color="#ffffff"></dd>
+    </dl> 
+    <dt>自我介绍</dt>
+    <dd>
+      <textarea name="介绍" id="" cols="30" rows="10" placeholder="&lt;/textarea>"></textarea>
+    </dd>
+    <fieldset>
+      <legend>这里面的全都禁用了</legend>
+        <input type="text">   
+        <input type="text">   
+        <input type="text">
+    </fieldset>
+    <button>提交</button>
+    <button reset>重置</button>
+  </form>
+  <hr id="bottom">
+</body>
+</html>
