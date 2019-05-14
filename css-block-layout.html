@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css-block-layout.html</title>
+  <style type="text/css">
+    body {
+      width: 600px;
+      margin: auto;
+      font-size: 16px;
+    }
+    .one {
+      color: white;
+      background-color: #000;
+      text-align: center;
+    }
+    div{
+        background-color: rgb(255,192,203);
+        border: 3px black solid;
+        text-align: center;
+        vertical-align: center;
+        width: 180px;
+        height: 40px;
+        box-sizing: border-box;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+    div:nth-child(3n+2){
+        margin-top: -55px;
+        margin-left: 210px;
+    }
+    div:nth-child(3n+3){
+        margin-top: -55px;
+        margin-left: 420px;
+    }
+    div:hover{
+        background-color: #f00;
+    }
+    .two{
+        border-bottom: dotted;
+        border-width: 1px;
+    }
+    footer{
+        background-color: rgb(238,130,238);
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <p class="one">hellow world 请调整浏览器窗口大小查看效果</h1>
+  <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+  <main>
+    <div>宽180高40（包含边框）</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
+  </main>
+  <p class="two">link</p>
+  <p class="two">link</p>
+  <p class="two">link</p>
+  <p class="two">link</p>
+  <p>link</p>
+  <footer>
+      ©版权所有<br>
+      本页所有布局均使用块元素
+  </footer>
+ 
+
+</body>
+</html>
