@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    * {
+  transition: 1s
+}
+input{
+  display: none;
+}
+input:checked + label{
+  width:200px;
+  height:100px;
+  background-color: rgb(110,221,94);
+  border-radius:60px;
+  position:relative;
+  display: block;
+}
+input:checked + label .circle{
+  width:80px;
+  height:80px;
+  border-radius:60px;
+  background-color: white;
+  position:absolute;
+  top:10px;
+  left:110px;
+}
+label{
+  width:200px;
+  height:100px;
+  background-color: rgb(221,221,221);
+  border-radius:60px;
+  position:relative;
+  display: block;
+}
+.circle{
+  width:80px;
+  height:80px;
+  border-radius:60px;
+  background-color: white;
+  position:absolute;
+  top:10px;
+  left:10px;
+}
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="open">
+  <label for="open">
+     <div class="circle"></div>
+  </label>
+</body>
+</html>
