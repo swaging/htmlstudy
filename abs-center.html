@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+   .first {
+  border: solid 5px red;
+  margin:100px;
+  width: 50%;
+  height: 100px;
+  position: relative;
+}
+.second {
+  border: solid 5px red;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  left: calc((100% - 30px)/2);
+  top:calc((100% - 20px)/2);
+}
+.one {
+  border: solid 5px red;
+  margin:100px;
+  padding: 50px;
+  display: inline-block;
+}
+.two {
+  border: solid 5px red;
+  padding: 50px;
+  display: inline-block;
+}
+  </style>
+</head>
+<body>
+  <div class="first">
+    <div class="second">position</div>
+  </div>
+  <div class="one">
+    <div class="two">inline</div>
+  </div>
+</body>
+</html>
