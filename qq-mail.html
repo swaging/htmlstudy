@@ -6,16 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style type="text/css">
+  * {
+    box-sizing: border-box
+  }
+  html,body{
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+  }
    img{
   width:100px;
 }
 header > * {
   display: inline-block;
   line-height: 2;
-  vertical-align: middle
+  vertical-align: middle;
+  height: 100px;
+}
+main {
+  font-size: 0px;
+  width: 100%;
+  height: calc(100% - 70px);
 }
 main > * {
   display: inline-block;
+  font-size: 16px;
 }
 ul { 
   color: rgb(30,84,148);
@@ -30,14 +45,17 @@ ul {
 aside ul:first-child{
   margin-top: 0px;
 }
+aside ul:nth-child(2){
+  margin-bottom: 0px;
+}
 .virtical {
   border-left: 1px solid rgb(121,167,215);
 }
 aside {
   width: 200px;
   height:100%;
-  margin-right:-10px;
-  vertical-align: top;
+  vertical-align: bottom;
+  overflow-y: auto;
 }
 .content{
   border-radius: 10px;
@@ -45,7 +63,7 @@ aside {
   width: calc(100% - 210px);
   height:100%;
   text-align: justify;
-  overflow-y: auto
+  overflow-y: auto;
 }
   </style>
 </head>
@@ -56,8 +74,8 @@ aside {
    zzhff(944968535@qq.com) <br>
    邮箱设置 <span class="virtical">设置-换肤</span>
  </p>   
-  </header>
-  <hr>
+</header>
+<hr>
   <main>
     <aside>
       <ul>

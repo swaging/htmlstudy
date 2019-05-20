@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    html,body{
+  margin: 0px;
+  height: 100%;
+}
+.all {
+  height: 100%;
+  font-size:0px;
+}
+all > *{
+  font-size: 16px;
+}
+.aside {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+.main{
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+}
+.a{
+  background-color: red;
+}
+.b{
+  background-color: green;
+}
+.c{
+  background-color: blue;
+}
+.d{
+  background-color: pink;
+}
+aside{
+  width:100%;
+  background-color: gray;
+  padding-top: 20%;
+}
+  </style>
+</head>
+<body>
+  <div class="all">
+    <div class="aside a"></div>
+    <div class="main b">
+      <aside></aside>
+    </div>
+    <div class="aside c"></div>
+    <div class="aside d"></div>   
+  </div>
+</body>
+</html>
