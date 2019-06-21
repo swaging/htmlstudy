@@ -433,23 +433,23 @@
   
 </script>
 
-<script type=xxx id="ch0104/20">
-  var a = Number (prompt('输入a'))
-  var b = Number (prompt('输入b'))
-  var c = Number (prompt('输入c'))
+<script id="ch0104/20">
+  var a = Number(prompt('输入a'))
+  var b = Number(prompt('输入b'))
+  var c = Number(prompt('输入c'))
   var delta = b * b - 4 * a * c
-  if ( delta > 0) {
-    var s_delta = Math.sqrt (delta)
-    var x1 = (-b + s_delta)/(2 * a)
-    var x2 = (-b - s_delta)/(2 * a)
-    console.log(x1,x2)
-  } else if (delta == 0){
+  if (delta > 0) {
+    var s_delta = Math.sqrt(delta)
+    var x1 = (-b + s_delta) / (2 * a)
+    var x2 = (-b - s_delta) / (2 * a)
+    console.log(x1, x2)
+  } else if (delta == 0) {
     var x = -b / (2 * a)
     console.log(x)
   } else {
-    var s_delta = Math.sqrt (-delta)
-    var x01 = -b / (2 * a) + "+" + s_delta / (2 * a) + "i"
-    var x02 = -b / (2 * a) + "-" + s_delta / (2 * a) + "i"
+    var s_delta = Math.sqrt(-delta)
+    var x01 = (-b / (2 * a)).toFixed(5) + "+" + (s_delta / (2 * a)).toFixed(5) + "i"
+    var x02 = (-b / (2 * a)).toFixed(5) + "-" + (s_delta / (2 * a)).toFixed(5) + "i"
     console.log(x01 + ";" + x02)
   }
 </script>
@@ -686,7 +686,7 @@
   var m = parseInt(prompt('输入整数m'))
   var y = parseInt(prompt('输入整数y'))
   var a = m
-  if (0 <= r && x <= 20 && 100 <= m && m <= 1000000 && 0 <= y && y <= 400) {
+  if (0 <= r && r <= 20 && 100 <= m && m <= 1000000 && 0 <= y && y <= 400) {
     for (var i = 0; i < y; i++) {
       a = Math.pow(1 + 0.01 * r, i + 1) * m
     }
@@ -783,8 +783,8 @@
     s = h + s
     h = 0.5 * h
   }
-  console.log(s)
-  console.log(0.5 * h)
+  console.log(s.toFixed(4))
+  console.log((0.5 * h).toFixed(7))
 </script>
 
 <script id="ch0105/21">
@@ -871,6 +871,8 @@
     f = (Math.floor(i / 9) / 9) % 9
     if (a == f && b == e && c == d) {
       console.log(i)
+      console.log(c * 100 + b * 10 + a)
+      console.log(f * 100 + e * 10 + d)
     }
   }
 </script>
@@ -894,11 +896,11 @@
 
 <script id="ch0105/27">
   var k = parseInt(prompt())
-  var x, y=0
+  var x, y = 0
   for (var i = 1; ; i++) {
     x = 1 / i
     y += x
-    if (y > k){
+    if (y > k) {
       console.log(i)
       break
     }
@@ -906,84 +908,88 @@
 </script>
 
 <script id="ch0105/28">
-  var n = parseInt(prompt()) 
+  var n = parseInt(prompt())
   var a = n % 10
-  for (var i = 1; ; i ++) {
-      if ((n / Math.pow(10, i)) < 1) {
-          break
-      }
-      a = a + " " + (Math.floor(n / Math.pow(10, i)) % 10)
+  for (var i = 1; ; i++) {
+    if ((n / Math.pow(10, i)) < 1) {
+      break
+    }
+    a = a + " " + (Math.floor(n / Math.pow(10, i)) % 10)
   }
   console.log(a)
 </script>
 
 <script id="ch0105/29">
-  var n = parseInt(prompt()) 
+  var n = parseInt(prompt())
   var digit = 0, sum = 0
   var m = Math.abs(n)
   var sign = n > 0 ? 1 : -1
-  for (var i = 0; m > 0; i++){
+  for (var i = 0; m > 0; i++) {
     digit = m % 10
-    sum = sum * 10 + digit 
-    m = (m - digit) /10
+    sum = sum * 10 + digit
+    m = (m - digit) / 10
   }
   console.log(sign * sum)
 </script>
 
 <script id="ch0105/30">
-  var m = parseInt(prompt()) 
-  var k = parseInt(prompt()) 
-  var x ,y=0
+  var m = parseInt(prompt())
+  var k = parseInt(prompt())
+  var x, y = 0
   if (m % 19 == 0) {
-    for (var i = 1 ; ; i ++){
+    for (var i = 1; ; i++) {
       if ((m / Math.pow(10, i)) < 1) {
-          break
+        break
       }
       x = Math.floor(m / Math.pow(10, i)) % 10
-      if (x % 3 == 0){
-          y ++
+      if (x % 3 == 0) {
+        y++
       }
     }
-    if ((m % 10) % 3 == 0 ){
-        y = y + 1   
-        if (y == k){
-          console.log("YES")
-        } else {
-          console.log("NO")
-        }
-    } 
-       else if ((m % 10) % 3 != 0) {
-        if (y == k){
-          console.log("YES")
-        } else {
-          console.log("NO")
-        }
+    if ((m % 10) % 3 == 0) {
+      y = y + 1
+      if (y == k) {
+        console.log("YES")
+      } else {
+        console.log("NO")
       }
+    }
+    else if ((m % 10) % 3 != 0) {
+      if (y == k) {
+        console.log("YES")
+      } else {
+        console.log("NO")
+      }
+    }
   }
-  else 
-          console.log("NO")
+  else
+    console.log("NO")
 </script>
 
 <script id="ch0105/31">
   var n = parseInt(prompt())
   var m = parseInt(prompt())
-  for (var i = 1 ; i <= n ; i++){
+  var str = ""
+  for (var i = 1; i <= n; i++) {
     var lighton = true
-    for (var p = 1 ; p <= m ; p++){
-      if (i % p == 0){
+    for (var p = 1; p <= m; p++) {
+      if (i % p == 0) {
         lighton = !lighton
       }
     }
-   if (!lighton ) console.log(i)
+    if (!lighton) {
+      str = str + " " + i
+    }
   }
+  console.log(str)
 </script>
 
 <script id="ch0105/32">
-  var n = parseInt(prompt()) 
+  var n = parseInt(prompt())
   var q = 2
   var p = 1
   var sn = 0
-  for (var i = 0 ; i < n ; i++){
+  for (var i = 0; i < n; i++) {
     qn = q
     pn = p
     p = qn
@@ -995,9 +1001,9 @@
 
 <script id="ch0105/33">
   var n = parseInt(prompt())
-  var sn = 0,sign = -1
-  for (var i = 1 ; i <= n ; i++){
-    sign *= -1 
+  var sn = 0, sign = -1
+  for (var i = 1; i <= n; i++) {
+    sign *= -1
     sn += sign / i
   }
   console.log(sn.toFixed(4))
@@ -1006,9 +1012,9 @@
 <script id="ch0105/34">
   var n = parseInt(prompt())
   var z = 0
-  for (var i = 1 ; i <= n ; i++){
+  for (var i = 1; i <= n; i++) {
     var y = 1
-    for (var x = 1 ; x <= i ; x ++){
+    for (var x = 1; x <= i; x++) {
       y *= x
     }
     z += y
@@ -1019,9 +1025,9 @@
 <script id="ch0105/35">
   var n = parseInt(prompt())
   var z = 1
-  for (var i = 1 ; i <= n ; i++){
+  for (var i = 1; i <= n; i++) {
     var y = 1
-    for (var x = 1 ; x <= i ; x ++){
+    for (var x = 1; x <= i; x++) {
       y *= x
     }
     z += 1 / y
@@ -1032,8 +1038,8 @@
 <script id="ch0105/36">
   var x = +(prompt())
   var n = parseInt(prompt())
-  var y = 1 / x,z=0
-  for (var i = 0 ; i <= n ; i++){
+  var y = 1 / x, z = 0
+  for (var i = 0; i <= n; i++) {
     y *= x
     z += y
   }
@@ -1045,9 +1051,9 @@
   var N = parseInt(prompt())
   var X = parseInt(prompt())
   var powerincrease
-  for (var i = 0 ; i < X ; i++){
-     powerincrease = Math.floor( M / N )
-     N += powerincrease
+  for (var i = 0; i < X; i++) {
+    powerincrease = Math.floor(M / N)
+    N += powerincrease
   }
   console.log(N)
 </script>
@@ -1057,18 +1063,18 @@
 
 <script id="ch0105/39">
   var n = parseInt(prompt())
-  var y = 0,digit
-  for (var i = 1 ; i <= n ; i++){
-    if (i % 7 != 0){
+  var y = 0, digit
+  for (var i = 1; i <= n; i++) {
+    if (i % 7 != 0) {
       var m = i
-      while(m > 0){
+      while (m > 0) {
         digit = m % 10
-      if (digit == 7){
-        break
-       }
-        m = (m - digit ) / 10 
+        if (digit == 7) {
+          break
+        }
+        m = (m - digit) / 10
       }
-      if (m == 0){
+      if (m == 0) {
         y += i * i
       }
     }
@@ -1078,16 +1084,16 @@
 
 <script id="ch0105/40">
   var n = parseInt(prompt())
-  var y = 0,digit
-  for (var i = 1 ; i <= n ; i++){
-      var m = i
-      while(m > 0){
-        digit = m % 10
-      if (digit == 1 ){
-        y ++
-       }
-        m = (m - digit ) / 10 
+  var y = 0, digit
+  for (var i = 1; i <= n; i++) {
+    var m = i
+    while (m > 0) {
+      digit = m % 10
+      if (digit == 1) {
+        y++
       }
+      m = (m - digit) / 10
+    }
   }
   console.log(y)
 </script>
@@ -1095,16 +1101,16 @@
 <script id="ch0105/41">
   var l = parseInt(prompt())
   var r = parseInt(prompt())
-  var y = 0,digit
-  for (var i = l ; i <= r ; i++){
-      var m = i
-      while(m > 0){
-        digit = m % 10
-      if (digit == 2 ){
-        y ++
-       }
-        m = (m - digit ) / 10 
+  var y = 0, digit
+  for (var i = l; i <= r; i++) {
+    var m = i
+    while (m > 0) {
+      digit = m % 10
+      if (digit == 2) {
+        y++
       }
+      m = (m - digit) / 10
+    }
   }
   console.log(y)
 </script>
@@ -1113,137 +1119,352 @@
 </script>
 
 <script id="ch0105/43">
-var n = parseInt(prompt())
-for (var i = 2 ; i < n; i++){
-  var p = n % i 
-  if (p == 0){
-    z = n / i
-    if(z > i) {
-      console.log(z)
+  var n = parseInt(prompt())
+  for (var i = 2; i < n; i++) {
+    var p = n % i
+    if (p == 0) {
+      z = n / i
+      if (z > i) {
+        console.log(z)
+      }
     }
   }
-}
 </script>
 
 <script id="ch0105/44">
   var n = parseInt(prompt())
-  var y = 0 ,z
-  for (var i = 2 ; ; i++){
+  var y = 0, z
+  for (var i = 2; ; i++) {
     var prime = true
-      for (var x = 2; x < i;x++){
-       z = i % x 
-       if (z == 0){
-         prime = false
-        } 
+    for (var x = 2; x < i; x++) {
+      z = i % x
+      if (z == 0) {
+        prime = false
       }
-       if (prime == true){
-         y++
-       }
-     if (y == n){
-       break
-     }
+    }
+    if (prime == true) {
+      y++
+    }
+    if (y == n) {
+      break
+    }
   }
   console.log(i)
-  </script>
+</script>
 
-  <不会script id="ch0105/45">
-    </script>
+<不会script id="ch0105/45">
+</script>
 
 <script id="7">
   var n = parseInt(prompt())
   var digit
-  if( n % 7 == 0){
+  if (n % 7 == 0) {
     console.log("YES")
-  } 
+  }
   else {
-    for (var i = 0; n > 0; i++){
-    digit = n % 10
-      if (digit == 7){
-      console.log("YES")
-      break
+    for (var i = 0; n > 0; i++) {
+      digit = n % 10
+      if (digit == 7) {
+        console.log("YES")
+        break
       }
-    n = (n - digit) /10
-   }
-   if (n == 0){
-    console.log("NO")
-   }
+      n = (n - digit) / 10
+    }
+    if (n == 0) {
+      console.log("NO")
+    }
   }
 </script>
 
 <script id="sort">
-    var a = parseInt(prompt())
-    var b = parseInt(prompt())
-    var c = parseInt(prompt())
-    var min = Infinity,max=-Infinity
-    if (min > a ){
-      min = a
-    }
-    if (min > b ){
-      min = b
-    }
-    if (min > c ){
-      min = c
-    }
-    if (max < a ){
-      max = a
-    }
-    if (max < b ){
-      max = b
-    }
-    if (max < c ){
-      max = c
-    }
-    if (max != a && min !=a){
-      console.log(min + '' + a + '' + max)
-    }
-    if (max != b && min !=b){
-      console.log(min + '' + b + '' + max)
-    }
-    if (max != c && min !=c){
-      console.log(min + '' + c + '' + max)
-    }
-  </script>
+  var a = parseInt(prompt())
+  var b = parseInt(prompt())
+  var c = parseInt(prompt())
+  var min = Infinity, max = -Infinity
+  if (min > a) {
+    min = a
+  }
+  if (min > b) {
+    min = b
+  }
+  if (min > c) {
+    min = c
+  }
+  if (max < a) {
+    max = a
+  }
+  if (max < b) {
+    max = b
+  }
+  if (max < c) {
+    max = c
+  }
+  if (max != a && min != a) {
+    console.log(min, a, max)
+  }
+  if (max != b && min != b) {
+    console.log(min, b, max)
+  }
+  if (max != c && min != c) {
+    console.log(min, c, max)
+  }
+</script>
 
 <script id="narcissistic">
-  debugger
-    var n = parseInt(prompt())
-    var digit ,sum =0, m = n
-    var r = String(n).length
-    while(n > 0){
-      digit = n % 10
-      var and = 1
-      for (var i = 0 ; i < r;i++ ){
-        and *= digit 
-      }  
-      n = (n - digit ) / 10
-      sum += and 
+  var n = parseInt(prompt())
+  var digit, sum = 0, m = n
+  var r = String(n).length
+  while (n > 0) {
+    digit = n % 10
+    var and = 1
+    for (var i = 0; i < r; i++) {
+      and *= digit
     }
-    if (sum == m){
-      console.log("YES")
-    }
-    else {
-      console.log("NO")
-    }
-  </script>
+    n = (n - digit) / 10
+    sum += and
+  }
+  if (sum == m) {
+    console.log("YES")
+  }
+  else {
+    console.log("NO")
+  }
+</script>
 
 <script id="narcissistics">
-  debugger
-    var n = parseInt(prompt())
-    var digit ,sum =0, m = n
+  for (var n = 1; n < 1000; n++) {
+    var digit, sum = 0, m = n
     var r = String(n).length
-    while(n > 0){
+    while (n > 0) {
       digit = n % 10
       var and = 1
-      for (var i = 0 ; i < r;i++ ){
-        and *= digit 
-      }  
-      n = (n - digit ) / 10
-      sum += and 
+      for (var i = 0; i < r; i++) {
+        and *= digit
+      }
+      n = (n - digit) / 10
+      sum += and
     }
-    if (sum == m){
+    if (sum == m) {
+      console.log(m)
+    }
+    n = m
+  }
+</script>
+
+<script id="palindrom">
+  // 获得长度
+  function getLength(n) {
+    var sum = 0
+    while (n > 0) {
+      var digit = n % 10
+      sum++
+      n = (n - digit) / 10
+    }
+    return sum
+  }
+  // 幂运算
+  function power(x, n) {
+    var pro = 1
+    for (var i = 0; i < n; i++) {
+      pro *= x
+    }
+    return pro
+  }
+  var n = parseInt(prompt())
+  var length = getLength(n)
+  var ispalindrom = true
+  for (var i = 1; i <= length / 2; i++) {
+
+    var digitright = Math.floor(n / power(10, i - 1)) % 10
+    var digitleft = Math.floor(n / power(10, length - i)) % 10
+    if (digitright != digitleft) {
+      ispalindrom = false
+      break
+    }
+  }
+  if (ispalindrom) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+</script>
+
+<script id="complete-number">
+  var n = parseInt(prompt())
+  var sum = 0
+  for (var i = 1; i < n; i++) {
+    if (n % i == 0) {
+      sum += i
+    }
+  }
+  if (sum == n) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+</script>
+<!-- <script id="complete-number">
+    var n = parseInt(prompt())
+    var sum = 1
+    for (var i = 2; i < Math.sqrt(n); i++) {
+      if (n % i == 0) {
+        sum += i + n / i
+      }
+    }
+    if ( Math.floor( Math.sqrt(n)) * Math.floor( Math.sqrt(n)) == n ){
+       sum += Math.sqrt(n)
+    }
+    if (sum == n) {
       console.log("YES")
-    }
-    else {
+    } else {
       console.log("NO")
     }
-  </script>
+  </script> -->
+
+<!-- <script id="complete-number">
+      function isComplete_number(n){
+        var sum = 1
+        for (var i = 2; i < Math.sqrt(n); i++) {
+          if (n % i == 0) {
+            sum += i + n / i
+          }
+        }
+        if ( Math.floor( Math.sqrt(n)) * Math.floor( Math.sqrt(n)) == n ){
+           sum += Math.sqrt(n)
+        }
+        if (sum == n) {
+          return true
+        } else {
+          return false
+        }
+      }
+      var n = parseInt(prompt())
+      if (isComplete_number(n)){
+        console.log("YES")
+      } else  {
+        console.log("NO")
+      }
+    </script> -->
+
+<script id="complete-numbers">
+  for (var n = 1; n <= 1000; n++) {
+    var sum = 0
+    for (var i = 1; i < n; i++) {
+      if (n % i == 0) {
+        sum += i
+      }
+    }
+    if (sum == n) {
+      console.log(n)
+    }
+  }
+</script>
+<!-- <script id="complete-numbers">
+    function isComplete_number(n){
+      var sum = 1
+      for (var i = 2; i < Math.sqrt(n); i++) {
+        if (n % i == 0) {
+          sum += i + n / i
+        }
+      }
+      if ( Math.floor( Math.sqrt(n)) * Math.floor( Math.sqrt(n)) == n ){
+         sum += Math.sqrt(n)
+      }
+      if (sum == n) {
+        return true
+      } else {
+        return false
+      }
+    }
+    function isComplete_numbers(n){
+    if (isComplete_number(n)){
+      return n
+     } 
+    }
+    var n = 1000
+    for (var i =1 ; i <= n ; i++){
+      if(isComplete_numbers(i)){
+        console.log(i)
+      }
+    }
+  </script> -->
+
+<script id="prime">
+  function isPrime(n) {
+    if (n == 1) {
+      return false
+    }
+    for (var i = 2; i <= Math.sqrt(n); i++) {
+      var a = n % i
+      if (a == 0) {
+        return false
+      }
+    }
+    return true
+  }
+  var n = parseInt(prompt())
+  if (isPrime(n)) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+</script>
+
+<script id="primes">
+  function isPrime(n) {
+    if (n == 1) {
+      return false
+    }
+    for (var i = 2; i <= Math.sqrt(n); i++) {
+      var a = n % i
+      if (a == 0) {
+        return false
+      }
+    }
+    return true
+  }
+  for (var i = 1; i <= 100; i++)
+    if (isPrime(i)) {
+      console.log(i)
+    }
+</script>
+
+<script id="itob">
+  var n = parseInt(prompt())
+  var str = ""
+  while (n > 0) {
+    var digit = n % 10
+    n = (n - digit) / 10
+    str = digit + "" + str
+  }
+</script>
+
+<script id="lcf&lcm">
+</script>
+
+<script id="sqrt">
+  function sqrt(n) {
+    var x = 2
+    x = x - (x * x - n) / (2 * x)
+    x = x - (x * x - n) / (2 * x)
+    x = x - (x * x - n) / (2 * x)
+    x = x - (x * x - n) / (2 * x)
+    x = x - (x * x - n) / (2 * x)
+    x = x - (x * x - n) / (2 * x)
+    x = x - (x * x - n) / (2 * x)
+    return x
+  }
+</script>
+<!-- 7: 输入一个数，输出其是否是7的倍数或各个位上是否有7（25：NO，27：YES，21：YES)
+  sort: 输入3个数，按从小到大顺序输出
+  narcissistic: 输入一个数判断其是否为水仙花数，输出"YES"/"NO"
+  narcissistics: 输出1000以内的水仙花数
+  palindrom: 输入一个数，判断其是否为一个一个回文数"YES"/"NO"
+  weekday: 输入年份与月份，输出这此年此月的第一天为星期几（0对应周日，1对应周一）
+  complete-number: 输入一个数判断其是否为完数，输出"YES"/"NO"
+  complete-numbers: 输出1000以内的完数
+  prime: 输入一个数判断其是否为素数数，输出"YES"/"NO"
+  primes: 输出100以内的素数
+  itob: 输入一个数，输出其字符串形式
+  lcf&lcm: 输入两个数，分别输出它们的最大公约数和最小公倍数
+  sqrt: 输入一个数，输出其平方根，精确到小数点后3位 -->
