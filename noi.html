@@ -1,4 +1,4 @@
-<script type=xxx id="ch0103/01">
+/ <script type=xxx id="ch0103/01">
   var A = Number(prompt("请输入A的值"))
   var B = Number(prompt("请输入B的值"))
   var result = A + B
@@ -1346,7 +1346,7 @@
       }
     </script> -->
 
-<script id="complete-numbers">
+<!-- <script id="complete-numbers">
   for (var n = 1; n <= 1000; n++) {
     var sum = 0
     for (var i = 1; i < n; i++) {
@@ -1358,8 +1358,8 @@
       console.log(n)
     }
   }
-</script>
-<!-- <script id="complete-numbers">
+</script> -->
+<script id="complete-numbers">
     function isComplete_number(n){
       var sum = 1
       for (var i = 2; i < Math.sqrt(n); i++) {
@@ -1387,7 +1387,7 @@
         console.log(i)
       }
     }
-  </script> -->
+  </script>
 
 <script id="prime">
   function isPrime(n) {
@@ -1429,17 +1429,52 @@
     }
 </script>
 
-<script id="itob">
+<script id="itob">//大坑 最后会输出0
   var n = parseInt(prompt())
-  var str = ""
   while (n > 0) {
     var digit = n % 10
-    n = (n - digit) / 10
-    str = digit + "" + str
+    switch (digit){
+      case 1: console.log("1"); break;
+      case 2: console.log("2"); break;
+      case 3: console.log("3"); break;
+      case 4: console.log("4"); break;
+      case 5: console.log("5"); break;
+      case 6: console.log("6"); break;
+      case 7: console.log("7"); break;
+      case 8: console.log("8"); break;
+      case 9: console.log("9"); break;
+      case 0: console.log("0"); break;
+    }
+    n = (n - digit ) / 10
   }
+  console.log("")
 </script>
 
 <script id="lcf&lcm">
+    function lcf (x,y){
+      var min = x < y ? x : y
+      var max = x > y ? x : y
+      while (min != 0){
+        while ( max - min > 0){
+        max = max - min
+        }
+        if (max - min == 0 ){
+          return min
+        }
+        var a = min
+      min = max
+      max =  a
+      if(min == 0){
+        return max
+      }
+     }
+    }
+    function lcm (x,y){
+     return x * y / lcf (x,y)
+    }
+    var x = prompt()
+    var y = prompt()
+    console.log(lcf(x,y),lcm(x,y))
 </script>
 
 <script id="sqrt">
@@ -1452,9 +1487,9 @@
     x = x - (x * x - n) / (2 * x)
     x = x - (x * x - n) / (2 * x)
     x = x - (x * x - n) / (2 * x)
+</script>
     return x
   }
-</script>
 <!-- 7: 输入一个数，输出其是否是7的倍数或各个位上是否有7（25：NO，27：YES，21：YES)
   sort: 输入3个数，按从小到大顺序输出
   narcissistic: 输入一个数判断其是否为水仙花数，输出"YES"/"NO"
@@ -1464,7 +1499,7 @@
   complete-number: 输入一个数判断其是否为完数，输出"YES"/"NO"
   complete-numbers: 输出1000以内的完数
   prime: 输入一个数判断其是否为素数数，输出"YES"/"NO"
+  lcf&lcm: 输入两个数，分别输出它们的最大公约数和最小公倍数
   primes: 输出100以内的素数
   itob: 输入一个数，输出其字符串形式
-  lcf&lcm: 输入两个数，分别输出它们的最大公约数和最小公倍数
   sqrt: 输入一个数，输出其平方根，精确到小数点后3位 -->
